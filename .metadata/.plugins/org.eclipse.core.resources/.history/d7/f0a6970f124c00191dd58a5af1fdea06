@@ -1,0 +1,14 @@
+package com.example.demo;
+
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Component;
+
+@Component
+public class RealConsumer {
+
+	 @KafkaListener(containerFactory = "kafkaListenerContainerFactory",topics = "test", groupId = "test_group")
+	 public void consume(Integer key,String message) {
+		 System.out.println("consumed key: "+ key + " Consumed message: " + message);
+	    
+	 }
+}
