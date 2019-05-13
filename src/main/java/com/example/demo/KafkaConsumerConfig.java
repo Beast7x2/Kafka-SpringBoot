@@ -27,7 +27,7 @@ public class KafkaConsumerConfig {
 
         config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,"earliest"); // To take values from the topic which were there before starting the listener
         //props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "5"); //Batch size
-        return new DefaultKafkaConsumerFactory<>(config);
+        return new  DefaultKafkaConsumerFactory<>(config);
     }
 
 
